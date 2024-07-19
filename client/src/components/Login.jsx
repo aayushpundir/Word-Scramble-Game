@@ -19,7 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
+      const response = await axios.post('https://word-scramble-game-server.onrender.com/login', { email, password });
       console.log(response.data);
 
       if (response.status === 200) {
