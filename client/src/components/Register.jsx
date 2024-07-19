@@ -17,7 +17,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/register', { name, aliasName, email, password });
+      const response = await axios.post('https://word-scramble-game-server.onrender.com/register', { name, aliasName, email, password });
       console.log(response.data);
 
       if (response.status === 201) {
