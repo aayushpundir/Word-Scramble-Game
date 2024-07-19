@@ -53,7 +53,7 @@ const EasyLevelPage = () => {
 
   const fetchHighScore = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/easylevelhighscore', { email });
+      const response = await axios.post('https://word-scramble-game-server.onrender.com/easylevelhighscore', { email });
       const { easy_score, full_name } = response.data;
       setName(full_name);
       setHighScore(easy_score);
@@ -64,7 +64,7 @@ const EasyLevelPage = () => {
 
   const postHighScore = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/easylevel', { email, highScore: currentScore });
+      const response = await axios.post('https://word-scramble-game-server.onrender.com/easylevel', { email, highScore: currentScore });
       if (response.status === 200) {
         console.log('Data send successful');
       } else {
@@ -77,7 +77,7 @@ const EasyLevelPage = () => {
 
   const fetchEasyWord = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/easylevel');
+      const response = await axios.get('https://word-scramble-game-server.onrender.com/easylevel');
       const { scramble_word, original_word, hint } = response.data;
       setScrambledWord(scramble_word);
       setOriginalWord(original_word);
