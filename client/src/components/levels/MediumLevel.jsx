@@ -55,7 +55,7 @@ const MediumLevel = () => {
   }, [timer]);
 
   const fetchHighScore = async () => {
-    const response = await axios.post('http://localhost:5000/mediumlevelhighscore', { email });
+    const response = await axios.post('https://word-scramble-game-server.onrender.com/mediumlevelhighscore', { email });
     console.log(email);
     
     const{ medium_score, full_name } = response.data;
@@ -67,7 +67,7 @@ const MediumLevel = () => {
 
   const postHighScore = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/mediumlevel', { email, highScore: currentScore });
+      const response = await axios.post('https://word-scramble-game-server.onrender.com/mediumlevel', { email, highScore: currentScore });
       if (response.status === 200) {
         console.log('Data send successful');
       } else {
@@ -80,7 +80,7 @@ const MediumLevel = () => {
 
   const fetchMediumWord = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/mediumlevel');
+      const response = await axios.get('https://word-scramble-game-server.onrender.com/mediumlevel');
       const { scramble_word, original_word, hint } = response.data;
       setScrambledWord(scramble_word);
       setOriginalWord(original_word);
