@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.557d2325.css",
+    "main.js": "/static/js/main.35f7a147.js",
+    "static/js/885.f295da13.chunk.js": "/static/js/885.f295da13.chunk.js",
+    "static/media/scram.png": "/static/media/scram.137f84a68e6658f4c8ce.png",
+    "index.html": "/index.html",
+    "main.557d2325.css.map": "/static/css/main.557d2325.css.map",
+    "main.35f7a147.js.map": "/static/js/main.35f7a147.js.map",
+    "885.f295da13.chunk.js.map": "/static/js/885.f295da13.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.557d2325.css",
+    "static/js/main.35f7a147.js"
+  ]
+}
