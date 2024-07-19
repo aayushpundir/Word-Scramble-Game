@@ -1,0 +1,12 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+
+  background-image: url('./scram.png');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Work Sans', sans-serif;
+} 
