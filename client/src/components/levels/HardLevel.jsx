@@ -54,7 +54,7 @@ const HardLevel = () => {
   }, [timer]);
 
   const fetchHighScore = async () => {
-    const response = await axios.post('http://localhost:5000/hardlevelhighscore', { email });
+    const response = await axios.post('https://word-scramble-game-server.onrender.com/hardlevelhighscore', { email });
     console.log(email);
     
     const{ hard_score, full_name } = response.data;
@@ -66,7 +66,7 @@ const HardLevel = () => {
 
   const postHighScore = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/hardlevel', {email, highScore: currentScore});
+      const response = await axios.post('https://word-scramble-game-server.onrender.com/hardlevel', {email, highScore: currentScore});
 
       if (response.status === 200) {
         console.log('Data send successful');
@@ -81,7 +81,7 @@ const HardLevel = () => {
 
   const fetchHardWord = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/hardlevel');
+      const response = await axios.get('https://word-scramble-game-server.onrender.com/hardlevel');
       const { scramble_word, original_word, hint } = response.data;
       setScrambledWord(scramble_word);
       setOriginalWord(original_word);
